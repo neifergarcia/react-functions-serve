@@ -2,18 +2,18 @@
 
 React and Firebase Functions.
 
-use stylus (opcional): if not use stylus then remove in package.json:
- - build-css
- - watch-css
+use stylus (opcional): if not use stylus then remove in package.json: build-css, watch-css
 also remove the use of watch-css in scrips start.
 (e.g.):
 "start": "npm-run-all -p watch-css start-js" -> "start": "npm-run-all -p start-js"
 
 # Requirements:
 - Firebase Tools
-  - login and add project firebase to our project (firebase use --add).
 - Node 6.11.5
-  - use nvm use 6.11.5 after install Node v6.11.5 for use node version 6.11.5
+
+## Notes
+- login and add project firebase to our project (firebase use --add).
+- use nvm use 6.11.5 after install Node v6.11.5 for use node version 6.11.5
 
 # Scripts
 - npm run make-dirs: make dirs that need the project
