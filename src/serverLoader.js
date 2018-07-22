@@ -27,8 +27,8 @@ export default (req, res, dataResp = {}) => {
   */
   const injectHTML = (data, { html, title, meta, link, body, scripts, state }) => {
     data = data.replace('<html>', `<html ${html}>`);
-    data = data.replace('{{META}}', meta); // META
-    data = data.replace('{{LINK}}', link); // LINK
+    data = data.replace('<!-- {{META}} -->', meta); // META
+    data = data.replace('<!-- {{LINK}} -->', link); // LINK
     data = data.replace(/<title>.*?<\/title>/g, title);
     data = data.replace(
       '<div id="root"></div>',
