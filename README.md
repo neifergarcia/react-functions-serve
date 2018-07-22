@@ -2,9 +2,10 @@
 
 React and Firebase Functions.
 
-use stylus (opcional): if not use stylus then remove in package.json: build-css, watch-css.
-also remove the use of watch-css in scrips start.
-(e.g.):
+use stylus (opcional): if not use stylus then remove in package.json: build-css, watch-css
+
+Also remove the use of watch-css in scrips start (e.g.):
+
 "start": "npm-run-all -p watch-css start-js" -> "start": "npm-run-all -p start-js"
 
 # Requirements:
