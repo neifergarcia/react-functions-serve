@@ -27,13 +27,15 @@
     "install-all": "npm install && cd functions && npm install && cd .. && npm run make-dirs",
     "build-css": "stylus -c src/app/views/styles --out public/static/css",
     "watch-css": "npm run build-css && stylus -c -w src/app/views/styles --out public/static/css",
+    "watch-css-serve": "npm run build-css && stylus -c -w src/app/views/styles --out build/static/css",
     "start-js": "react-scripts start",
     "start": "npm-run-all -p watch-css start-js",
     "build-js": "react-scripts build",
     "afterBuild": "node afterBuild.js && cp -r ./src ./functions",
     "build": "npm-run-all build-css build-js afterBuild",
     "createFirebaseConf": "firebase setup:web --json > functions/config/firebase-config.json",
-    "serve": "npm run createFirebaseConf && firebase serve --only hosting,functions",
+    "create-serve": "npm run createFirebaseConf && firebase serve --only hosting,functions",
+    "serve": "npm-run-all -p watch-css-serve create-serve",
     "deploy": "npm run build && npm run createFirebaseConf && firebase deploy --only hosting,functions"
   }
 }
