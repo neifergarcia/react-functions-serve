@@ -1,0 +1,18 @@
+# dependences
+node_modules
+
+build
+.firebaserc
+**.log
+**-lock.json
+
+# ignore static generated
+public/static/css/style.css
+
+# functions
+functions/assets/template.html
+functions/assets/manifest.json
+functions/config/firebase-config.json 
+functions/src
+
+
